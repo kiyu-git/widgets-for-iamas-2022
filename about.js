@@ -4,12 +4,15 @@ const html = `
     margin: 0;
     color: white;
   }
+  .extendedh { width: 100%; }
+  .extendedv { height: 100%; }
+  .extendedh body, .extendedh #wrapper { width: 500px; }
+  .extendedv body, .extendedv #wrapper { height: 100%; }
   #wrapper {
     border: 2px solid black;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-    width: 500px;
   }
 </style>
 <div id="wrapper">
