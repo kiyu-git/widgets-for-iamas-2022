@@ -1,0 +1,51 @@
+id: widgets-for-iamas-2022
+name: Widgets for the exhibit at IAMAS 2022
+version: 0.0.2
+extensions:
+  - id: show-hide-model-layer
+    type: widget
+    name: Show/Hide Model Layer Widget
+    widgetLayout:
+      extendable:
+        horizontally: true
+        vertically: true
+      defaultLocation:
+        zone: outer
+        section: right
+        area: bottom
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: label
+              type: string
+              title: Label
+            - id: title
+              type: string
+              title: Title of the model layer
+  - id: about
+    type: widget
+    name: About Widget
+    widgetLayout:
+      defaultLocation:
+        zone: outer
+        section: left
+        area: top
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: title
+              type: string
+              title: Title
+            - id: description
+              type: string
+              title: Description
+            - id: image
+              type: url
+              title: Image URL
+              ui: image
+              availableIf:
+                field: style
+                type: string
+                value: image
